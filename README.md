@@ -13,6 +13,14 @@ $ cd <project>
 
 At this point you may want to search and replace `PROJECT_NAME` within the project with the project name
 
+For example, to replace `PROJECT_NAME` to the project directory name, on OSX you can execute:
+
+```
+$ LC_ALL=C find ./ -type f -exec sed -i '' -e "s/PROJECT_NAME/$(basename $(pwd))/g" {} \;
+```
+
+**DO NOT RUN THIS COMMAND ON ANY VERSION MANAGED OR NPM INSTALLED FOLDER**
+
 ```
 $ npm install
 ```
