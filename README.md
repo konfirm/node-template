@@ -6,7 +6,7 @@ Basic Node.js project template, helps to set up the basics real quick.
 ## Installation
 
 ```
-$ npx degit konfirm/node-project-template <project>
+$ npx degit konfirm/node-template <project>
 
 $ cd <project>
 ```
