@@ -15,7 +15,10 @@ bootstrap: \
 	rename-placeholder/README.md \
 	rename-placeholder/LICENSE \
 	node_modules
-	@git init && git add .* * && git commit -m "Bootstrap"
+	@git init
+	@find . -iname '.[^\.]*' -type f -maxdepth 1 -exec git add '{}' ';'
+	@find . -iname '[^\.]*' -maxdepth 1 -exec git add '{}' ';'
+	@git commit -m "Bootstrap"
 
 best-practise: LICENSE README.md
 
