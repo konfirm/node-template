@@ -1,18 +1,18 @@
 {
-  "name": "@konfirm/PROJECT_NAME",
+  "name": "@konfirm/%PROJECT_NAME%",
   "version": "0.0.0",
   "description": "Describe the purpose of the project",
-  "main": "source/PROJECT_NAME.js",
+  "main": "source/main.js",
   "scripts": {
     "test": "lab -vclr",
     "test-coverage-html": "lab -clr html -o report.html"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/konfirm/node-PROJECT_NAME.git"
+    "url": "https://github.com/konfirm/node-%PROJECT_NAME%.git"
   },
   "bugs": {
-    "url": "https://github.com/konfirm/node-PROJECT_NAME/issues"
+    "url": "https://github.com/konfirm/node-%PROJECT_NAME%/issues"
   },
   "keywords": [],
   "author": "Rogier Spieker <rogier@konfirm.eu>",

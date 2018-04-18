@@ -1,9 +1,21 @@
+project_name := $(notdir $(shell pwd))
+project_year := $(shell date +%Y)
+
 lab := node_modules/.bin/lab
 
-.PHONY: clean test outdated best-practise
+.PHONY: clean test outdated best-practise rename-placeholder
 
 all:
 	${MAKE} clean test
+
+rename-placeholder/%: %
+	@sed -i '' -e 's/%PROJECT_NAME%/${project_name}/g; s/%PROJECT_YEAR%/${project_year}/g' $<
+
+bootstrap: \
+	rename-placeholder/README.md \
+	rename-placeholder/LICENSE \
+	node_modules
+	@git init && git add .* * && git commit -m "Bootstrap"
 
 best-practise: LICENSE README.md
 

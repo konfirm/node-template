@@ -9,22 +9,11 @@ Basic Node.js project template, helps to set up the basics real quick.
 $ npx degit konfirm/node-template <project>
 
 $ cd <project>
+
+$ make bootstrap
 ```
 
-At this point you may want to search and replace `PROJECT_NAME` within the project with the project name
-
-For example, to replace `PROJECT_NAME` to the project directory name, on OSX you can execute:
-
-```
-$ LC_ALL=C find ./ -type f -exec sed -i '' -e "s/PROJECT_NAME/$(basename $(pwd))/g" {} \;
-```
-
-**DO NOT RUN THIS COMMAND ON ANY VERSION MANAGED OR NPM INSTALLED FOLDER**
-
-```
-$ npm install
-```
-
+The `make bootstrap` command will take care of replacing the `PROJECT_NAME` and `PROJECT_YEAR` placeholders in all files as well as initialize a git repo and making the first commit.
 
 ## Structure
 
@@ -46,11 +35,12 @@ The configuration is both basic and opiniated
  - `.editorconfig` - uses tabs (except for package.json)
  - `.eslintrc.json` - some additional restrictions and relaxing settings for eslint-config-strict
  - `.npmignore` - Ignores the test folder and configuration files from being published
+ - `.gitignore` - Ignores the node_modules folder
 
 
 ## License
 
-MIT License Copyright (c) 2018 Rogier Spieker (Konfirm)
+MIT License Copyright (c) %PROJECT_YEAR% Rogier Spieker (Konfirm)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
